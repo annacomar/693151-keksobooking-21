@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг» [![Build status][travis-image]][travis-url]
 
 * Студент: [Анна Волохова](https://up.htmlacademy.ru/javascript/21/user/693151).
-* Наставник: `Неизвестно`.
+* Наставник: `Евгений Фаллер`.
 
 ---
 
