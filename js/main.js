@@ -16,47 +16,38 @@ const LOCATION_X = function getRandomInt(min, max) {
 
 const LOCATION_Y = getRandomInt(130, 630);
 
-
-
-//функция генерации случайных данных
-
 var generateElement = function() {
+  var generateAnnoncesData {
+    let ANNONCES = ['annonce1', 'annonce2', 'annonce3', 'annonce4',
+      'annonce5', 'annonce6', 'annonce7', 'annonce8'
+    ];
 
-    // 1) как правильно включать эти константы (ниже) в функцию?
-    //ещё одну функцию написать, которая включает в себя цикл?
-    //или мы константы назначаем над функцией, которая перебирает данные массива?
+    for (var i = 1; i < ANNONCES.length; i++) {
+       ANNONCES.push('
 
-    //2 / вот это задание в тренажёрах, где назначаются свойства
-    //и затем используются для создания данных новой карточки,
-    //можно по тому же принципу делать это задание? или скорее запутает?
-    //https://up.htmlacademy.ru/javascript/21/courses/219/run/23
+      "author": {
+        "avatar": "avatar": `img/avatars/user0${i + 1}.png`;
+      },
 
+      "offer": {
+        "title": 'название объявления',
+        "address": '600, 350',
+        "price": '400',
+        "type": 'TYPE',
+        "rooms": '3',
+        "guests": '4',
+        "checkin": CHECKIN,
+        "checkout": CHECKOUT,
+        "features": FEATURES,
+        "description": 'описание объявления';
+        "photos": PHOTOS;
+      },
+      "location": LOCATION_X,
+      LOCATION_Y;
+      ');
+    }
+  }
+};
 
-    var generateAnnoncesData {
-      let ANNONCES = ['annonce1', 'annonce2', 'annonce3', 'annonce4',
-        'annonce5', 'annonce6', 'annonce7', 'annonce8'
-      ];
-
-      for (var i = 1; i < ANNONCES.length; i++) {
-
-        "author": {
-          "avatar": 'img/avatars/user{{xx}}.png'
-          //4 как лучше всего задавать выбор числа от 1 до 8? где {{xx}} это число от 1 до 8 с ведущим нулём. Например, 01, 02 и т. д. Адреса изображений не повторяются
-        },
-        "offer": {
-          "title": 'h1',
-          "address": '600, 350',
-          "price": 'number',
-          "type": 'TYPE',
-          "rooms": 'number', // 5: что сюда пишем?
-          "guests": 'number', // 6: аналогично 5
-          "checkin": CHECKIN,
-          "checkout": CHECKOUT,
-          "features": FEATURES,
-          "description": 'p';
-          "photos": PHOTOS;
-        },
-        "location": LOCATION_X, LOCATION_Y;/
-        }
-      }
-    };
+let map = document.querySelector('.map');
+map.classList.remove('map--faded');
